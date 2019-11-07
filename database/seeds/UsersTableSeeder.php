@@ -1,0 +1,22 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use App\Rayon;
+use App\User;
+
+class UsersTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Rayon::create([
+            'nama_rayon' => 'Sukasari 2',
+            'pembimbing' => 'Miss rachmi',
+        ]);
+    }
+}
