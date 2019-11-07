@@ -37,7 +37,6 @@
                                     @foreach ($user as $u)
                                     <tr>
                                         @if($u->tunggakan->isEmpty())
-                                        <div class="alert bg-success col-12 text-white">Lunas</div>
                                         @else
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$u->name}}</td>
