@@ -43,6 +43,7 @@
                             <div class="form-group ">
                                 <select name="role" id="" class="form-control form-control-alternative">
                                     <option value="">Role</option>
+                                    <option value="bendahara">Bendahara</option>
                                     <option value="pembimbing">Pembimbing</option>
                                     <option value="siswa">siswa</option>
                                 </select>

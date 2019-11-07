@@ -31,6 +31,8 @@ class HomeController extends Controller
             return view('siswa.index');
         } else  if ($userRole == "pembimbing"){
             return view('pembimbing.index');
+        } else if ($userRole == 'operator'){
+            return view('operator.index');
         }
     }
 }

@@ -65,7 +65,8 @@
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                     </a>
                 </li>
-                @if(in_array(auth()->user()->role,['bendahara']))
+                {{-- sidebar operator --}}
+                @if(in_array(auth()->user()->role,['operator']))
                 <li class="nav-item">
                     <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-controls="navbar-examples">
                         <i class="ni ni-diamond" style="color: #f4645f;"></i>
@@ -83,6 +84,20 @@
                                     {{ __('Tambah Data Siswa') }}
                                 </a>
                             </li>
+                        </ul>
+                    </div>
+                </li>
+                @Endif
+
+                {{-- sidebar bendahara --}}
+                @if(in_array(auth()->user()->role,['bendahara']))
+                <li class="nav-item">
+                    <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-controls="navbar-examples">
+                        <i class="ni ni-diamond" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" >{{ __('Data Management') }}</span>
+                    </a>
+                    <div class="collapse show" id="navbar-examples">
+                        <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('input.index') }}">
                                     {{ __('Input Data Tunggakan') }}
@@ -96,6 +111,8 @@
                         </ul>
                     </div>
                 @endif
+
+                {{-- sidebar siswa --}}
                 @if(in_array(auth()->user()->role,['siswa']))
                 <li class="nav-item">
                         <a class="nav-link" href="{{ route('beranda.create') }}">
@@ -103,14 +120,18 @@
                         </a>
                     </li>
                 @endif
+
+                {{-- sidebar pemimbing --}}
                 @if(in_array(auth()->user()->role,['pembimbing']))
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('data.show',Auth::user()->rayon_id)}}">
-                        <i class="ni ni-atom text-success"></i>
+                        <i class="ni ni-collection text-danger"></i>
                         <span class="nav-link-text">{{ __('Lihat Data') }}</span>
                     </a>
                 </li>
                 @endif
+
+
             </ul>
         </div>
     </div>

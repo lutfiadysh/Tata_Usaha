@@ -99,6 +99,7 @@
                                     </div>
                                     <select name="role" id="role" class="form-control form-control-alternative">
                                         <option value="">Pilih Salah satu</option>
+                                        <option value="operator">operator</option>
                                         <option value="bendahara">bendahara</option>
                                         <option value="pembimbing">pembimbing</option>
                                         <option value="siswa">siswa</option>

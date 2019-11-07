@@ -19,7 +19,7 @@
                     <div class="card shadow">
                         <h5 class="mt-3 ml-3">Data yang terhapus</h5>
                         @if($deleted->isEmpty())
-                            <div class="alert bg-warning col-10 ml-6 mt-4 mb-5 text-white">
+                            <div class="alert bg-warning col-12 ml-3 mt-4 mb-5 text-white">
                                 Tidak ada data
                             </div>
                         @else
@@ -48,7 +48,7 @@
                                     @foreach ($deleted as $u)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$u->user->first()->name}}</td>
+                                        <td>{{$u->user->name}}</td>
                                         <td>{{$u->va_jumlah}}</td>
                                         <td>{{$u->va_bulan}}</td>
                                         <td>{{$u->tunai_jumlah}}</td>

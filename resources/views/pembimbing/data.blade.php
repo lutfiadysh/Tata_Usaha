@@ -13,8 +13,8 @@
                 <h5 id="date_time" class="text-white"></h5>
                     <div class="card shadow">
                         <h5 class="mt-3 ml-3">Tunggakan Siswa Rayon : {{Auth::user()->rayon->nama_rayon}}</h5>
-                        <div class="card-body col-12 table-responsive">
-                            <table id="myTable" class="table table-bordered">
+                        <div class="card-body col-12 table-responsive mr-2">
+                            <table id="myTable" class="table table-bordered mr-2">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -37,9 +37,7 @@
                                     @foreach ($user as $u)
                                     <tr>
                                         @if($u->tunggakan->isEmpty())
-                                        <tr>
-                                            <td colspan="16"><div class="alert bg-success col-12 text-white">Lunas</div></td>
-                                        </tr>
+                                        <div class="alert bg-success col-12 text-white">Lunas</div>
                                         @else
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$u->name}}</td>

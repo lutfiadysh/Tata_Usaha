@@ -16,8 +16,9 @@ class PembimbingController extends Controller
     public function index()
     {
         $rayon = Rayon::all();
+        $users = User::where(['role','siswa'],['rayon_id',$id]);
 
-        return view('pembimbing.data',compact('rayon'));
+        return view('pembimbing.data',compact('rayon','users'));
     }
 
     /**
@@ -49,10 +50,10 @@ class PembimbingController extends Controller
      */
     public function show($id)
     {
-       $user = User::where('role','siswa')->get();
-       $rayon =  Rayon::all();
+       $user = User::where([['role','siswa'],['rayon_id',$id]])->get();
+       $users =  User::all();
 
-       return view('pembimbing.data',compact('rayon','user'));
+       return view('pembimbing.data',compact('users','user'));
     }
 
     /**

@@ -1,7 +1,8 @@
 <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
     <div class="container px-4">
         <a class="navbar-brand" href="{{ route('home') }}">
-            <h3 class="text-white title-1 mt-4">Tata Usaha Wikrama</h3>
+            <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img float-left ml--3 mr-2" alt="...">
+            <h3 class="text-white title-1 ml-2 mt-1">Tata Usaha Wikrama</h3>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,7 +13,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="{{ route('home') }}">
-                           <h5>Tata Usaha Wikrama</h5>
+                            <h4 class="float-right mt-2">Tata Usaha Wikrama</h4>
                         </a>
                     </div>
                     <div class="col-6 collapse-close">

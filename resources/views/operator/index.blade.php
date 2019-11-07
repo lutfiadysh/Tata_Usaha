@@ -4,15 +4,18 @@
     @include('layouts.headers.cards')
     
     <div class="container-fluid mt--7">
+        <div class="row justify-content-center">
+            <div class="col-12 mb-5 mb-xl-0">
+            </div>
+        </div>
         <div class="row mt-5 mb-7">
             <div class="col-12 shadow">
                 <h5 id="date_time" class="text-white"></h5>
-                    <div class="card ">
-                        <div class="card-body row">
-                        <span class="text-success col-6">Selamat Datang orang tua dari :</span>
-                        <h3 class=" col-6 "> {{Auth::user()->name}} !</h3>
-                        <span class="col-6 ">Rayon :</span>
-                        <h3 class="mt--2 col-6 ">{{Auth::user()->rayon->nama_rayon}}</h3>
+                    <div class="card shadow">
+                        <h5 id="date_time" class="text-white"></h5>
+                        <div class="card-body">
+                        <span class="text-success">Selamat Datang</span>
+                        <h5>{{Auth::user()->name}}</h5>
                         </div>
                     </div>
             </div>

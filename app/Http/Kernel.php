@@ -68,6 +68,7 @@ class Kernel extends HttpKernel
         'bendahara' => \App\Http\Middleware\isAdmin::class,
         'siswa' => \App\Http\Middleware\isStudent::class,
         'pembimbing' => \App\Http\Middleware\isTeacher::class,
+        'operator' => \App\Http\Middleware\isOperator::class,
     ];
 
     /**

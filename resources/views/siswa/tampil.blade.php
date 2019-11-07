@@ -14,7 +14,7 @@
                     <div class="card shadow">
                         <h5 class="mt-3 ml-3">Tunggakan</h5>
                         @if(Auth::user()->tunggakan->isEmpty())
-                            <div class="alert bg-success col-10 ml-6 mt-4 mb-5 text-white">
+                            <div class="alert bg-success col-10 ml-3 mt-4 mb-5 text-white">
                                 Lunas
                             </div>
                         @else
@@ -68,7 +68,7 @@
                                     </tr>
                                     <tr>
                                         <th scope="col">TOTAL</th>
-                                        <td colspan="2">{{Auth::user()->tunggakan->first()->total}}</td>
+                                        <td colspan="2" class="bg-yellow text-white">{{Auth::user()->tunggakan->first()->total}}</td>
                                     </tr>
                                 </thead>
                                 <tbody>

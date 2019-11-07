@@ -19,19 +19,26 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-	Route::middleware('bendahara')->group(function() {
-        Route::prefix('bendahara')->group(function() {
-            Route::resource('/input','InputController');
+	Route::middleware('operator')->group(function() {
+		Route::prefix('operator')->group(function() {
 			Route::resource('/siswa','SiswaController');
 			Route::resource('/rayon','RayonController');
 		});
 	});
+
+	Route::middleware('bendahara')->group(function() {
+        Route::prefix('bendahara')->group(function() {
+            Route::resource('/input','InputController');
+		});
+	});
+
 	Route::middleware('siswa')->group(function() {
 		Route::prefix('siswa')->group(function() {
 			Route::get('','UserController@index')->name('beranda.create');
 			Route::get('{id}', 'UserController@show')->name('data.show');
 		});
 	});
+
 	Route::middleware('pembimbing')->group(function() {
 		Route::prefix('pembimbing')->group(function() {
 			Route::resource('/data','PembimbingController');
