@@ -23,12 +23,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 		Route::prefix('operator')->group(function() {
 			Route::resource('/siswa','SiswaController');
 			Route::resource('/rayon','RayonController');
+			Route::post('/import','ExcelController@import_excel')->name('import.data');
 		});
 	});
 
 	Route::middleware('bendahara')->group(function() {
         Route::prefix('bendahara')->group(function() {
-            Route::resource('/input','InputController');
+			Route::resource('/input','InputController');
+			Route::post('/tunggakan/import', 'ExcelController@tunggakan_import')->name('import.tunggakan');
 		});
 	});
 

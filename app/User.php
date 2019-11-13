@@ -36,6 +36,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    protected $primaryKey = 'nis';
 
     public function rayon() {
         return $this->belongsTo('App\Rayon');

@@ -39,15 +39,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 mt-4">
+                <div class="card shadow mb-2">
+                    <div class="card-header">
+                        <h5>Input Otomatis</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                                <button type="button" class="btn btn-success col-12 mb--4" data-toggle="modal" data-target="#example">
+                                    Import Data
+                                </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="card shadow">
                     <div class="card-header">
-                        <h5>Data Inputan</h5>
+                        <h5>Input Manual</h5>
                     </div>
                     <div class="card-body">
                         <form action="{{{route('input.store')}}}" method="post">
                             @csrf
-                            <input type="hidden" value="{{$s->id ?? ''}}" name="user_id">
+                            <input type="hidden" value="{{$s->nis ?? ''}}" name="user_nis">
                             <span>Virtual Account</span>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
@@ -85,103 +97,99 @@
                             <span>Lain -lain</span>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
+                                        <div class="input-group-append mr-3">
+                                            <div class="input-group-text">DSP : </div>
+                                        </div>
                                     <input type="text" name="dsp" id="dsp" class="form-control form-control-alternative" placeholder="DSP">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">DSP</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-alternative">
-                                    <input type="text" name="sertifikat" id="sertifikat" class="form-control form-control-alternative" placeholder="Sertifikat internasional Keahlian">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">Sertifikat Keahlian</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-alternative">
-                                    <input type="text"  name="pondokan" id="pondokan" class="form-control form-control-alternative" placeholder="Pondokan">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">Pondokan</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-alternative">
-                                    <input type="text" name="perpisahan" id="perpisahan" class="form-control form-control-alternative" placeholder="Perpisahan">
                                     
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            Perpisahan
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
+                                    <div class="input-group-append mr-3">
+                                        <div class="input-group-text">Sertifikat Keahlian :</div>
+                                    </div>
+                                    <input type="text" name="sertifikat" id="sertifikat" class="form-control form-control-alternative" placeholder="Sertifikat internasional Keahlian">
+                                    
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative">
+                                        <div class="input-group-append mr-3">
+                                                <div class="input-group-text">Pondokan :</div>
+                                            </div>
+                                    <input type="text"  name="pondokan" id="pondokan" class="form-control form-control-alternative" placeholder="Pondokan">
+                                    
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-append mr-3">
+                                        <div class="input-group-text">
+                                            Perpisahan :
+                                        </div>
+                                    </div>
+                                    <input type="text" name="perpisahan" id="perpisahan" class="form-control form-control-alternative" placeholder="Perpisahan">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative">
+                                    <div class="form-group-append mr-3">
+                                        <div class="input-group-text">
+                                            Dana SMT Ganjil :
+                                        </div>
+                                    </div>
                                     <input type="text" name="dana_ganjil" id="dana_ganjil" class="form-control form-control-alternative" placeholder="Dana Pengembangan SMT Ganjil">
-
-                                    <div class="form-group-append">
-                                        <div class="input-group-text">
-                                            Dana SMT Ganjil
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
+                                    <div class="input-group-append mr-3">
+                                        <div class="input-group-text">
+                                            Dana SMT Genap : 
+                                        </div>
+                                    </div>
                                     <input type="text" name="dana_genap" id="dana_genap" class="form-control form-control-alternative" placeholder="Dana Pengembangan SMT Genap">
-
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            Dana SMT Genap
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
+                                    <div class="input-group-append mr-3">
+                                        <div class="input-group-text">
+                                            Kunjungan Industri :
+                                        </div>
+                                    </div>
                                     <input type="text" name="kunjungan_industri" id="kunjungan_industri" class="form-control form-control-alternative" placeholder="Kunjungan Industri">
-
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            Kunjungan Industri
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
+                                    <div class="input-group-append mr-3">
+                                        <div class="input-group-text">
+                                            BPJS :
+                                        </div>
+                                    </div>
                                     <input type="text" name="bpjs" id="bpjs" class="form-control form-control-alternative" placeholder="BPJS">
-
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            BPJS
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
+                                    <div class="input-group-append mr-3">
+                                        <div class="input-group-text">
+                                            TOEIC    : 
+                                        </div>
+                                    </div>
                                     <input type="text" name="toeic" id="toeic" class="form-control form-control-alternative" placeholder="TOEIC">
-
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            TOEIC
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
-                                    <input type="text" name="total" id="total" class="form-control form-control-alternative" placeholder="Total">
-
-                                    <div class="input-group-append">
+                                    <div class="input-group-append mr-3">
                                         <div class="input-group-text">
-                                            TOTAL
+                                            TOTAL :
                                         </div>
                                     </div>
+                                    <input type="text" name="total" id="total" class="form-control form-control-alternative" placeholder="Total">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-success col-12" {{ isset($s) ? '' : 'disabled' }}>Simpan</button>
@@ -305,7 +313,7 @@
                         <tr>
                             <td>{{$s->name}}</td>
                             <td>{{$s->nis}}</td>
-                            <td><a href="{{route('input.show',$s->id)}}" class="btn btn-primary">
+                            <td><a href="{{route('input.show',$s->nis)}}" class="btn btn-primary">
                                     <i class="fa fa-forward"></i>
                                 </a></td>
                                 @endforeach
@@ -316,3 +324,29 @@
         </div>
     </div>
     </div>
+
+    <div class="modal fade" id="example" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Import Data Tunggakan</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form action="{{route('import.tunggakan')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-body">
+                  <div class="form-group">
+                      <label for="file">Pilih File excel</label>
+                      <input type="file" name="file" class="form-control form-control-alternative">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>

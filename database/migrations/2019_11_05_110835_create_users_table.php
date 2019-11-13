@@ -14,11 +14,11 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            // $table->bigIncrements('id');
             $table->bigInteger('rayon_id')->unsigned();
             $table->string('rombel');
             $table->string('name');
-            $table->integer('nis');
+            $table->bigInteger('nis');
             $table->string('role');
             $table->string('email')->unique();
             $table->string('tahun_pelajaran');
@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->primary('nis');
 
             $table->foreign('rayon_id')
                 ->references('id')->on('rayon')

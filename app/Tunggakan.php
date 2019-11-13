@@ -11,7 +11,7 @@ class Tunggakan extends Model
 
     protected $table = 'tunggakan';
 
-    protected $fillable = ['user_id','va_jumlah','va_bulan','tunai_jumlah','tunai_bulan','dsp','sertifikat',
+    protected $fillable = ['user_nis','va_jumlah','va_bulan','tunai_jumlah','tunai_bulan','dsp','sertifikat',
     'pondokan','perpisahan','dana_ganjil','dana_genap','kunjungan_industri','bpjs','toeic','total'];
 
     protected $dates = ['deleted_at'];

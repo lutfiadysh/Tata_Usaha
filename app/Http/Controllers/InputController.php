@@ -30,7 +30,7 @@ class InputController extends Controller
     public function store(Request $request)
     {
         Tunggakan::create([
-            'user_id' => $request->user_id,
+            'user_nis' => $request->user_nis,
             'va_jumlah' => $request->va_jumlah,
             'va_bulan' => $request->va_bulan,
             'tunai_jumlah' => $request->tunai_jumlah,
@@ -93,7 +93,7 @@ class InputController extends Controller
      */
     public function destroy($id)
     {
-        $data = Tunggakan::onlyTrashed()->where('id',$id)->destroy();
+        $data = Tunggakan::where('id',$id)->destroy();
 
         return redirect()->route('input.create')->withStatus(_('Data successfully Deleted.'));
     }
