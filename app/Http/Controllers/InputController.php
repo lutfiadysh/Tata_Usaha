@@ -47,7 +47,7 @@ class InputController extends Controller
             'total' => $request->total,
         ]);
 
-        return redirect()->route('input.index')->withStatus(__('Data successfully created.'));
+        return redirect()->route('input.index')->withStatus('Data succesfully inserted.');
     }
 
     /**
@@ -81,7 +81,7 @@ class InputController extends Controller
     {
         $deleted = Tunggakan::onlyTrashed()->where('id',$id);
         $deleted->restore();
-        return redirect()->route('input.create')->withStatus(__('Data successfully Restored.'));
+        return redirect()->route('input.create')->withStatus(__(Alert::success("this is success alert")));
     }
 
 
@@ -93,8 +93,13 @@ class InputController extends Controller
      */
     public function destroy($id)
     {
-        $data = Tunggakan::where('id',$id)->destroy();
+        $data = Tunggakan::where('id',$id)->forceDelete();
 
-        return redirect()->route('input.create')->withStatus(_('Data successfully Deleted.'));
+        return redirect()->route('input.create')->withStatus(__('Data successfully Deleted.'));
+    }
+    public function destroy_all(){
+        $data = Tunggakan::onlyTrashed()->forceDelete();
+
+        return redirect()->route('input.create')->withStatus(__('Data successfully Deleted.'));
     }
 }

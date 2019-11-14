@@ -65,7 +65,7 @@
                                 <button type="submit" class="btn btn-success col-12">Simpan</button>
                             </div>
                             <div class="form-group">
-                                <button type="button" class="btn btn-warning col-12" data-toggle="modal" data-target="#importExcel">
+                                <button type="button" class="btn btn-primary col-12" data-toggle="modal" data-target="#importExcel">
                                     Import data
                                 </button>
                             </div>

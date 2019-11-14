@@ -69,7 +69,7 @@
                 @if(in_array(auth()->user()->role,['operator']))
                 <li class="nav-item">
                     <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-controls="navbar-examples">
-                        <i class="ni ni-diamond" style="color: #f4645f;"></i>
+                        <i class="ni ni-diamond text-primary"></i>
                         <span class="nav-link-text" >{{ __('Data Management') }}</span>
                     </a>
                     <div class="collapse show" id="navbar-examples">
@@ -93,7 +93,7 @@
                 @if(in_array(auth()->user()->role,['bendahara']))
                 <li class="nav-item">
                     <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-controls="navbar-examples">
-                        <i class="ni ni-diamond" style="color: #f4645f;"></i>
+                        <i class="ni ni-diamond text-success"></i>
                         <span class="nav-link-text" >{{ __('Data Management') }}</span>
                     </a>
                     <div class="collapse show" id="navbar-examples">

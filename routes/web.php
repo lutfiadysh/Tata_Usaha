@@ -24,12 +24,19 @@ Route::get('/home', 'HomeController@index')->name('home');
 			Route::resource('/siswa','SiswaController');
 			Route::resource('/rayon','RayonController');
 			Route::post('/import','ExcelController@import_excel')->name('import.data');
+			Route::post('/rayon/import', 'ExcelController@rayon_import')->name('import.rayon');
 		});
 	});
 
 	Route::middleware('bendahara')->group(function() {
         Route::prefix('bendahara')->group(function() {
-			Route::resource('/input','InputController');
+			Route::get('/input','InputController@index')->name('input.index');
+			Route::get('/input/deleted', 'InputController@create')->name('input.create');
+			Route::get('/input/{id}','InputController@show')->name('input.show');
+			Route::post('/input/store', 'InputController@store')->name('input.store');
+			Route::get('/input/{id}/restore', 'InputController@edit')->name('input.edit');
+			Route::get('/input/{id}/delete','InputController@destroy')->name('input.destroy');
+			Route::get('/delete/all', 'InputController@destroy_all')->name('input.destroy.all');
 			Route::post('/tunggakan/import', 'ExcelController@tunggakan_import')->name('import.tunggakan');
 		});
 	});

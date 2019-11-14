@@ -41,7 +41,7 @@ class SiswaController extends Controller
     {
         User::create($request->merge(['password' => Hash::make($request->get('password'))])->all());
 
-        return redirect()->route('siswa.index')->withStatus(__('User successfully created.'));
+        return redirect()->route('siswa.index')->withStatus('Data succesfully inserted.');
     }
 
     /**

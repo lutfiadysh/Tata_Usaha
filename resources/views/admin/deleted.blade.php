@@ -19,11 +19,12 @@
                     <div class="card shadow">
                         <h5 class="mt-3 ml-3">Data yang terhapus</h5>
                         @if($deleted->isEmpty())
-                            <div class="alert bg-warning col-12 ml-3 mt-4 mb-5 text-white">
+                            <div class="alert bg-warning col-11 ml-5 mt-4 mb-5 text-white">
                                 Tidak ada data
                             </div>
                         @else
                         <div class="card-body col-12 table-responsive">
+                            <a href="{{route('input.destroy.all')}}" class="btn btn-danger float-right mb-2" {{ isset($deleted) ? '' : 'hidden' }}>Hapus Semua</a>
                             <table id="myTable" class="table table-bordered">
                                 <thead>
                                     <tr>
