@@ -11,7 +11,7 @@
         </div>
         <div class=" container row mt-5 mb-7">
             <div class="col-12 ">
-                <h5 id="date_time" class="text-white"></h5>
+                <h5 id="date_time" class="text-white mt--4"></h5>
                     <div class="card shadow">
                         <h5 class="mt-3 ml-3">Tunggakan</h5>
                         @if(Auth::user()->tunggakan->isEmpty())

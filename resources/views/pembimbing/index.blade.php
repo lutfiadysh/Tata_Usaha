@@ -10,7 +10,7 @@
         </div>
         <div class="row mt-5 mb-7">
             <div class="col-12">
-                <h5 id="date_time" class="text-white"></h5>
+                <h5 id="date_time" class="text-white mt--4"></h5>
                     <div class="card shadow">
                         <div class="card-body">
                         <span class="text-success">Selamat Datang pembimbing :</span>

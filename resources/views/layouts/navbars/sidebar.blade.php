@@ -61,6 +61,9 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <h5 id="date_time" class="text-pink ml-4 mr-2 mt--2"></h5>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                     </a>
@@ -69,10 +72,10 @@
                 @if(in_array(auth()->user()->role,['operator']))
                 <li class="nav-item">
                     <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-controls="navbar-examples">
-                        <i class="ni ni-diamond text-primary"></i>
+                        <i class="ni ni-sound-wave text-danger"></i>
                         <span class="nav-link-text" >{{ __('Data Management') }}</span>
                     </a>
-                    <div class="collapse show" id="navbar-examples">
+                    <div class="collapse" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('rayon.index') }}">
@@ -93,10 +96,10 @@
                 @if(in_array(auth()->user()->role,['bendahara']))
                 <li class="nav-item">
                     <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-controls="navbar-examples">
-                        <i class="ni ni-diamond text-success"></i>
+                        <i class="ni ni-credit-card text-success"></i>
                         <span class="nav-link-text" >{{ __('Data Management') }}</span>
                     </a>
-                    <div class="collapse show" id="navbar-examples">
+                    <div class="collapse " id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('input.index') }}">
@@ -104,8 +107,13 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('input.data') }}">
+                                    {{ __('Data Tunggakan') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('input.create') }}">
-                                    {{ __('Data Terhapus') }}
+                                    {{ __('History') }}
                                 </a>
                             </li>
                         </ul>
@@ -116,7 +124,7 @@
                 @if(in_array(auth()->user()->role,['siswa']))
                 <li class="nav-item">
                         <a class="nav-link" href="{{ route('beranda.create') }}">
-                            <i class="ni ni-atom text-primary"></i> {{ __('Lihat Data ') }}
+                            <i class="ni ni-collection text-green"></i> {{ __('Lihat Data ') }}
                         </a>
                     </li>
                 @endif
@@ -125,7 +133,7 @@
                 @if(in_array(auth()->user()->role,['pembimbing']))
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('data.show',Auth::user()->rayon_id)}}">
-                        <i class="ni ni-collection text-danger"></i>
+                        <i class="ni ni-collection text-green"></i>
                         <span class="nav-link-text">{{ __('Lihat Data') }}</span>
                     </a>
                 </li>

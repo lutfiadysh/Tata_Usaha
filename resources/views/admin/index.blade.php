@@ -13,7 +13,6 @@
         </div>
         <div class="row mt-5 mb-7">
             <div class="col-6 mb-5 mb-xl-0">
-                <h5 id="date_time" class="text-white"></h5>
                 <div class="card shadow">
                     <div class="card-header">
                         <h5>Pilih Siswa</h5>
@@ -39,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 mt-4">
+            <div class="col-6 ">
                 <div class="card shadow mb-2">
                     <div class="card-header">
                         <h5>Input Otomatis</h5>

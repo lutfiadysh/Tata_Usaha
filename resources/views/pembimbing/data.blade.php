@@ -10,7 +10,7 @@
         </div>
         <div class=" container row mt-5 mb-7">
             <div class="col-12 ">
-                <h5 id="date_time" class="text-white"></h5>
+                <h5 id="date_time" class="text-white mt--4"></h5>
                     <div class="card shadow">
                         <h5 class="mt-3 ml-3">Tunggakan Siswa Rayon : {{Auth::user()->rayon->nama_rayon}}</h5>
                         <div class="card-body col-12 table-responsive mr-2">

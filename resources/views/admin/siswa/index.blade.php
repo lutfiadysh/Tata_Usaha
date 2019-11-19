@@ -17,7 +17,6 @@
         </div>
         <div class="row mt-5 mb-7">
             <div class="col-10 ml-6 mb-5 mb-xl-0">
-                <h5 id="date_time" class="text-white"></h5>
                 <div class="card shadow">
                     <div class="card-header">
                         <h5>Input Data User</h5>

@@ -81,9 +81,16 @@ class InputController extends Controller
     {
         $deleted = Tunggakan::onlyTrashed()->where('id',$id);
         $deleted->restore();
-        return redirect()->route('input.create')->withStatus(__(Alert::success("this is success alert")));
+        return redirect()->route('input.create')->withStatus(__('Data successfully Restored.'));
     }
 
+    public function soft_deletes($id)
+    {
+        $tunggakan = Tunggakan::findOrFail($id);
+        $tunggakan->each->delete();
+
+        return back();
+    }
 
     /**
      * Remove the specified resource from storage.

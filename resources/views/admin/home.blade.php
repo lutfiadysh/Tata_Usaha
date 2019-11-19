@@ -10,14 +10,13 @@
         </div>
         <div class="row mt-5 mb-7">
             <div class="col-12 shadow">
-                <h5 id="date_time" class="text-white"></h5>
-                    <div class="card shadow">
-                        <h5 id="date_time" class="text-white"></h5>
-                        <div class="card-body">
-                        <span class="text-success">Selamat Datang</span>
-                        <h5>Bendahara</h5>
-                        </div>
+                <div class="card shadow">
+                    <h5 id="date_time" class="text-white"></h5>
+                    <div class="card-body">
+                    <span class="text-success">Selamat Datang</span>
+                    <h5>Bendahara</h5>
                     </div>
+                </div>
             </div>
         </div>
 

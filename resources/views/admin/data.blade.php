@@ -16,8 +16,8 @@
         <div class=" container row mt-5 mb-7">
             <div class="col-12 ">
                     <div class="card shadow">
-                        <h5 class="mt-3 ml-3">Data yang terhapus</h5>
-                        @if($deleted->isEmpty())
+                        <h5 class="mt-3 ml-3">Data Tunggakan</h5>
+                        @if($data->isEmpty())
                             <div class="alert bg-warning col-11 ml-3 mt-4 mb-5 text-white">
                                 Tidak ada data
                             </div>
@@ -26,7 +26,6 @@
                             <a href="{{route('input.destroy.all')}}" class="btn btn-danger float-right mb-2" {{ isset($deleted) ? '' : 'hidden' }}>Hapus Semua</a>
                             <table id="myTable" class="table table-bordered">
                                 <thead>
-                                    <tr>
                                         <th>#</th>
                                         <th>Nama</th>
                                         <th colspan="2" class="text-center">virtual account</th>
@@ -41,11 +40,10 @@
                                         <th scope="col">BPJS</th>
                                         <th scope="col">TOEIC</th>
                                         <th scope="col">TOTAL</th>
-                                        <th colspan="2">Action</th>
-                                    </tr>
+                                        <th scope="col">ACT</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($deleted as $u)
+                                    @foreach ($data as $u)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$u->user->name}}</td>
@@ -63,8 +61,7 @@
                                         <td>{{$u->bpjs}}</td>
                                         <td>{{$u->toeic}}</td>
                                         <td>{{$u->total}}</td>
-                                        <td><a href="{{route('input.edit',$u->id)}}" class="btn btn-warning mb-3 col-12 ml-2">Restore</a></td>
-                                        <td><a href="{{route('input.destroy',$u->id)}}" class="btn btn-danger mb-3 col-12">Hapus</a></td>
+                                        <td><a href="{{route('input.soft',$u->id)}}" class="btn btn-danger">delete</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

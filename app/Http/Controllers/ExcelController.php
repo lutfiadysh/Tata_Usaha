@@ -18,6 +18,12 @@ class ExcelController extends Controller
 		return back()->withStatus('Data succesfully imported.');
 	}
 
+	public function data()
+    {
+        $data = Tunggakan::where('deleted_at',null)->get();
+
+        return view('admin.data',compact('data'));
+    }
 
 	public function tunggakan_import(){
 		$s = Tunggakan::all();
