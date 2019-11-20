@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app',['title'=>'Welcome!'])
 
 @section('content')
     @include('layouts.headers.cards')
@@ -14,7 +14,7 @@
                     <h5 id="date_time" class="text-white"></h5>
                     <div class="card-body">
                     <span class="text-success">Selamat Datang</span>
-                    <h5>Bendahara</h5>
+                    <h3>{{Auth::user()->name}}</h3>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app',['title'=>'History'])
 
 @section('content')
     @include('layouts.headers.cards')
@@ -16,14 +16,22 @@
         <div class=" container row mt-5 mb-7">
             <div class="col-12 ">
                     <div class="card shadow">
-                        <h5 class="mt-3 ml-3">Data yang terhapus</h5>
-                        @if($deleted->isEmpty())
-                            <div class="alert bg-warning col-11 ml-3 mt-4 mb-5 text-white">
-                                Tidak ada data
+                        <div class="card-header boder-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h5 class="mb-0">Data yang terhapus</h5>
+                                </div>
+                                @if($deleted->isEmpty())
+                                <div class="alert bg-warning col-11 ml-3 mt-4 mb-5 text-white">
+                                    Tidak ada data
+                                </div>
+                                @else
+                                <div class="col text-right" {{ isset($deleted) ? '' : 'hidden' }}>
+                                    <a href="{{route('input.destroy.all')}}" class="btn btn-danger btn-sm" >Hapus Semua</a>
+                                </div>
                             </div>
-                        @else
+                        </div>
                         <div class="card-body col-12 table-responsive">
-                            <a href="{{route('input.destroy.all')}}" class="btn btn-danger float-right mb-2" {{ isset($deleted) ? '' : 'hidden' }}>Hapus Semua</a>
                             <table id="myTable" class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -41,7 +49,7 @@
                                         <th scope="col">BPJS</th>
                                         <th scope="col">TOEIC</th>
                                         <th scope="col">TOTAL</th>
-                                        <th colspan="2">Action</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -63,8 +71,8 @@
                                         <td>{{$u->bpjs}}</td>
                                         <td>{{$u->toeic}}</td>
                                         <td>{{$u->total}}</td>
-                                        <td><a href="{{route('input.edit',$u->id)}}" class="btn btn-warning mb-3 col-12 ml-2">Restore</a></td>
-                                        <td><a href="{{route('input.destroy',$u->id)}}" class="btn btn-danger mb-3 col-12">Hapus</a></td>
+                                        <td><a href="{{route('input.edit',$u->id)}}" class="btn btn-warning mb-3 btn-sm">Restore</a>
+                                        <a href="{{route('input.destroy',$u->id)}}" class="btn btn-danger mb-3 btn-sm">Hapus</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -72,12 +80,11 @@
                             @endif
                         </div>
                     </div>
+                </div>
             </div>
+            @include('layouts.footers.auth')
         </div>
-
-        @include('layouts.footers.auth')
-    </div>
-@endsection
+    @endsection
 
 @push('js')
     <script>

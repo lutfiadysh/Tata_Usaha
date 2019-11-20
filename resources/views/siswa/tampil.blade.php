@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app',['title'=>'Data Tunggakan'])
 
 @section('content')
     @include('layouts.headers.cards')

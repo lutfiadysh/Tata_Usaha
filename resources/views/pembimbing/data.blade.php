@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app',['title'=>'Data Tunggakan'])
 
 @section('content')
     @include('layouts.headers.cards')
@@ -31,6 +31,7 @@
                                         <th scope="col">BPJS</th>
                                         <th scope="col">TOEIC</th>
                                         <th scope="col">TOTAL</th>
+                                        <th scope="col">Tanggal</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -54,6 +55,7 @@
                                         <td>{{$u->tunggakan->first()->bpjs}}</td>
                                         <td>{{$u->tunggakan->first()->toeic}}</td>
                                         <td>{{$u->tunggakan->first()->total}}</td>
+                                        <td>{{$u->tunggakan->first()->tanggal}}</td>
                                         @endif
                                     </tr>
                                     @endforeach

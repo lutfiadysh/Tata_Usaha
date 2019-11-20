@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app',['title'=>'Data Tunggakan'])
 
 @section('content')
     @include('layouts.headers.cards')
@@ -40,7 +40,7 @@
                                         <th scope="col">BPJS</th>
                                         <th scope="col">TOEIC</th>
                                         <th scope="col">TOTAL</th>
-                                        <th scope="col">ACT</th>
+                                        <th scope="col">ACTION</th>
                                 </thead>
                                 <tbody>
                                     @foreach ($data as $u)
@@ -61,7 +61,7 @@
                                         <td>{{$u->bpjs}}</td>
                                         <td>{{$u->toeic}}</td>
                                         <td>{{$u->total}}</td>
-                                        <td><a href="{{route('input.soft',$u->id)}}" class="btn btn-danger">delete</a></td>
+                                        <td><a href="{{route('input.soft',$u->id)}}" class="btn btn-danger btn-sm">delete</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

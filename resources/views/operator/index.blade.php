@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app',['title'=>'Welcome!'])
 
 @section('content')
     @include('layouts.headers.cards')
@@ -13,7 +13,7 @@
                     <div class="card shadow">
                         <div class="card-body">
                         <span class="text-success">Selamat Datang</span>
-                        <h5>{{Auth::user()->name}}</h5>
+                        <h3 class="mb-0">{{Auth::user()->name}}</h3>
                         </div>
                     </div>
             </div>

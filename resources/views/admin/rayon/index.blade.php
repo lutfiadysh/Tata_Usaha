@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app',['title'=>'Manage Rayon'])
 
 @section('content')
     @include('layouts.headers.cards')
