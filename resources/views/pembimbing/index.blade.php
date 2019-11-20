@@ -8,13 +8,15 @@
             <div class="col-12 mb-5 mb-xl-0">
             </div>
         </div>
-        <div class="row mt-5 mb-7">
+        <div class="row mt--2 mb-7">
             <div class="col-12">
                 <h5 id="date_time" class="text-white mt--4"></h5>
                     <div class="card shadow">
+                        <div class="card-header bg-gradient-green">
+                            <h3 class="mb-0 text-white">Selamat Datang pembimbing </h3>
+                        </div>
                         <div class="card-body">
-                        <span class="text-success">Selamat Datang pembimbing rayon</span>
-                        <h3 class="mb-0">{{Auth::user()->rayon->nama_rayon}}</h3>
+                        <h2 class="mb-0">{{Auth::user()->rayon->nama_rayon}}</h2>
                         </div>
                     </div>
             </div>

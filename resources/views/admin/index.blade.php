@@ -11,11 +11,11 @@
                 </div>
             @endif
         </div>
-        <div class="row mt-5 mb-7">
-            <div class="col-6 mb-5 mb-xl-0">
+        <div class="row mt--2 mb-7 justify-content-center">
+            <div class="col-md-6">
                 <div class="card shadow">
-                    <div class="card-header">
-                        <h5>Pilih Siswa</h5>
+                    <div class="card-header bg-gradient-green">
+                        <h3 class="mb-0 text-white">Pilih Siswa</h3>
                     </div>
                     <div class="card-body">
                         <form action="">
@@ -38,10 +38,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 ">
+            <div class="col-md-6">
                 <div class="card shadow mb-2">
-                    <div class="card-header">
-                        <h5>Input Otomatis</h5>
+                    <div class="card-header bg-gradient-green">
+                        <h3 class="mb-0 text-white">Input Otomatis</h3>
                     </div>
                     <div class="card-body">
                         <div class="form-group">
@@ -52,8 +52,8 @@
                     </div>
                 </div>
                 <div class="card shadow">
-                    <div class="card-header">
-                        <h5>Input Manual</h5>
+                    <div class="card-header bg-gradient-green">
+                        <h3 class="mb-0 text-white">Input Manual</h3>
                     </div>
                     <div class="card-body">
                         <form action="{{{route('input.store')}}}" method="post">

@@ -11,11 +11,11 @@
                 </div>
             @endif
         </div>
-        <div class="row mt-5 mb-7">
-            <div class="col-10 ml-6 mb-5 mb-xl-0">
+        <div class="row mt--2 mb-7 justify-content-center">
+            <div class="col-10 justify-content-center">
                 <div class="card shadow">
-                    <div class="card-header">
-                        <h5>Input Data Rayon</h5>
+                    <div class="card-header bg-gradient-green">
+                        <h3 class="mb-0 text-white">Input Data Rayon</h3>
                     </div>
                     <div class="card-body">
                         <form action="{{route('rayon.store')}}" method="post">

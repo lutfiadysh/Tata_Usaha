@@ -7,18 +7,19 @@
         <!-- Brand -->
         <a class="navbar-brand pt-0 row" href="{{ route('home') }}">
             <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img float-left" alt="...">
-            <h4 class="float-right mt-2">TATA USAHA WIKRAMA</h4>
+            <h4 class="float-right mt-1 ml-2">TATA USAHA WIKRAMA</h4>
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
             <li class="nav-item dropdown">
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
+                        <small><i class="ni ni-circle-08"></i></small>
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
                     <div class=" dropdown-header noti-title">
-                        <h6 class="text-overflow m-0">{{ __('Welcome!') }}</h6>
+                        <h6 class="text-overflow m-0">Welcome!, {{ Auth::user()->name}}</h6>
                     </div>
                     <div class="dropdown-divider"></div>
                     <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();

@@ -8,12 +8,14 @@
             <div class="col-12 mb-5 mb-xl-0">
             </div>
         </div>
-        <div class="row mt-5 mb-7">
-            <div class="col-12 shadow">
+        <div class="row mb-9 mt-2">
+            <div class="col-12">
                     <div class="card shadow">
+                        <div class="card-header bg-gradient-green">
+                            <h3 class="mb-0 text-white">Selamat datang</h3>
+                        </div>
                         <div class="card-body">
-                        <span class="text-success">Selamat Datang</span>
-                        <h3 class="mb-0">{{Auth::user()->name}}</h3>
+                        <h2 class="mb-0">{{Auth::user()->name}}</h2>
                         </div>
                     </div>
             </div>

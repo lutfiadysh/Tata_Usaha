@@ -8,11 +8,12 @@
             <div class="col-12 shadow">
                 <h5 id="date_time" class="text-white"></h5>
                     <div class="card ">
-                        <div class="card-body row">
-                        <span class="text-success col-6">Selamat Datang orang tua dari :</span>
-                        <h3 class=" col-6 "> {{Auth::user()->name}} !</h3>
-                        <span class="col-6 ">Rayon :</span>
-                        <h3 class="mt--2 col-6 ">{{Auth::user()->rayon->nama_rayon}}</h3>
+                        <div class="card-header bg-gradient-green">
+                            <h3 class="text-white">Selamat Datang orang tua dari :</h3>
+                        </div>
+                        <div class="card-body">
+                        <h3 class="mb-0 "> {{Auth::user()->name}} </h3>
+                        <h5 class="mb-0">{{Auth::user()->rayon->nama_rayon}}</h5>
                         </div>
                     </div>
             </div>

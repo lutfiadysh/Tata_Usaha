@@ -12,7 +12,7 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="{{ route('home') }}">
+                        <a href="/">
                             <h4 class="float-right mt-2">Tata Usaha Wikrama</h4>
                         </a>
                     </div>

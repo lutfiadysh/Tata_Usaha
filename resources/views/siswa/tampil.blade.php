@@ -13,9 +13,11 @@
             <div class="col-12 ">
                 <h5 id="date_time" class="text-white mt--4"></h5>
                     <div class="card shadow">
-                        <h5 class="mt-3 ml-3">Tunggakan</h5>
+                        <div class="card-header bg-gradient-green">
+                            <h3 class="mb-0 text-white">Tunggakan</h3>
+                        </div>
                         @if(Auth::user()->tunggakan->isEmpty())
-                            <div class="alert bg-success col-10 ml-3 mt-4 mb-5 text-white">
+                            <div class="alert bg-primary mt-2 mb-0 justify-content-center text-white">
                                 Lunas
                             </div>
                         @else

@@ -8,11 +8,12 @@
             <div class="col-12 mb-5 mb-xl-0">
             </div>
         </div>
-        <div class=" container row mt-5 mb-7">
-            <div class="col-12 ">
-                <h5 id="date_time" class="text-white mt--4"></h5>
+        <div class=" container row mt--2 mb-7">
+            <div class="col-12">
                     <div class="card shadow">
-                        <h5 class="mt-3 ml-3">Tunggakan Siswa Rayon : {{Auth::user()->rayon->nama_rayon}}</h5>
+                        <div class="card-header bg-gradient-green">
+                            <h3 class="mb-0 text-white">Tunggakan Siswa Rayon : {{Auth::user()->rayon->nama_rayon}}</h3>
+                        </div>
                         <div class="card-body col-12 table-responsive mr-2">
                             <table id="myTable" class="table table-bordered mr-2">
                                 <thead>
@@ -55,7 +56,7 @@
                                         <td>{{$u->tunggakan->first()->bpjs}}</td>
                                         <td>{{$u->tunggakan->first()->toeic}}</td>
                                         <td>{{$u->tunggakan->first()->total}}</td>
-                                        <td>{{$u->tunggakan->first()->tanggal}}</td>
+                                        <td>{{$u->tunggakan->first()->updated_at}}</td>
                                         @endif
                                     </tr>
                                     @endforeach

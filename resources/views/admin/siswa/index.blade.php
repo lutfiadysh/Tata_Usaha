@@ -15,11 +15,11 @@
             <div class="col-xl-8 mb-5 mb-xl-0">
             </div>
         </div>
-        <div class="row mt-5 mb-7">
-            <div class="col-10 ml-6 mb-5 mb-xl-0">
+        <div class="row mt--2 mb-7 justify-content-center">
+            <div class="col-10 ">
                 <div class="card shadow">
-                    <div class="card-header">
-                        <h5>Input Data User</h5>
+                    <div class="card-header bg-gradient-success">
+                        <h3 class="mb-0 text-white">Input Data User</h3>
                     </div>
                     <div class="card-body">
                         <form action="{{route('siswa.store')}}" method="post">
