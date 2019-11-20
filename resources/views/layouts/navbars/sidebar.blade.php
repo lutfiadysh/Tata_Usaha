@@ -62,7 +62,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <h5 id="date_time" class="text-pink ml-4 mr-2 mt--2"></h5>
+                    <h5 id="date_time" class="text-primary ml-4 mr-2 mt--2"></h5>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">

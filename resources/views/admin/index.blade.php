@@ -13,7 +13,7 @@
         </div>
         <div class="row mt--2 mb-7 justify-content-center">
             <div class="col-md-6">
-                <div class="card shadow">
+                <div class="card shadow mb-2">
                     <div class="card-header bg-gradient-green">
                         <h3 class="mb-0 text-white">Pilih Siswa</h3>
                     </div>

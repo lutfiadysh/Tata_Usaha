@@ -13,14 +13,14 @@
             @endif
             </div>
         </div>
-        <div class=" container row mt--2 mb-7">
+        <div class=" container  mt--2 mb-7">
             <div class="col-12 justify-content-center">
                     <div class="card shadow">
                         <div class="card-header bg-gradient-green">
                             <h3 class="mb-0 text-white">Data Tunggakan</h3>
                         </div>
                         @if($data->isEmpty())
-                            <div class="alert bg-danger col-11 ml-3 mt-4 mb-5 text-white">
+                            <div class="alert bg-danger justify-content-center  mt-4 mb-5 text-white">
                                 Tidak ada data!
                             </div>
                         @else

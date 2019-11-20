@@ -12,7 +12,7 @@
                             <h3 class="text-white">Selamat Datang orang tua dari :</h3>
                         </div>
                         <div class="card-body">
-                        <h3 class="mb-0 "> {{Auth::user()->name}} </h3>
+                        <h2 class="mb-0 "> {{Auth::user()->name}} </h2>
                         <h5 class="mb-0">{{Auth::user()->rayon->nama_rayon}}</h5>
                         </div>
                     </div>

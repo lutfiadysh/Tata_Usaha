@@ -13,19 +13,19 @@
             @endif
             </div>
         </div>
-        <div class="container row mt-2">
+        <div class="container  mt-2">
             <div class="col-12 justify-content-center">
                     <div class="card shadow">
+                        @if($deleted->isEmpty())
+                        <div class="alert bg-warning col-11 ml-3 mt-4 mb-5 text-white">
+                            Tidak ada data
+                        </div>
+                        @else
                         <div class="card-header boder-0 bg-gradient-green">
                             <div class="row align-items-center">
                                 <div class="col">
                                     <h3 class="mb-0 text-white">Data yang terhapus</h3>
                                 </div>
-                                @if($deleted->isEmpty())
-                                <div class="alert bg-warning col-11 ml-3 mt-4 mb-5 text-white">
-                                    Tidak ada data
-                                </div>
-                                @else
                                 <div class="col text-right" {{ isset($deleted) ? '' : 'hidden' }}>
                                     <a href="{{route('input.destroy.all')}}" class="btn btn-danger btn-sm" >Hapus Semua</a>
                                 </div>

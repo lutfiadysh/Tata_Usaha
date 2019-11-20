@@ -26,13 +26,13 @@
                             @csrf
                             <h4 class="mb-2">Data diri</h4>
                             <div class="form-group mt-3">
-                                <input type="text" name="nis" class="form-control form-control-alternative" placeholder="Nomor Induk Siswa">
+                                <input type="text" name="nis" class="form-control form-control-alternative" placeholder="Nomor Induk Siswa" required autofocus>
                             </div>
                             <div class="form-group ">
-                                <input type="text" name="name" class="form-control form-control-alternative" placeholder="Nama Lengkap">
+                                <input type="text" name="name" class="form-control form-control-alternative" placeholder="Nama Lengkap" required>
                             </div>
                             <div class="form-group ">
-                                <select name="rayon_id" id="" class="form-control form-control-alternative">
+                                <select name="rayon_id" id="" class="form-control form-control-alternative" required>
                                     <option value="">Rayon</option>
                                     @foreach ($rayon as $r)
                                     <option value="{{$r->id}}">{{$r->nama_rayon}}</option>
@@ -40,7 +40,7 @@
                                 </select>
                             </div>
                             <div class="form-group ">
-                                <select name="role" id="" class="form-control form-control-alternative">
+                                <select name="role" id="" class="form-control form-control-alternative" required> 
                                     <option value="">Role</option>
                                     <option value="bendahara">Bendahara</option>
                                     <option value="pembimbing">Pembimbing</option>
