@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('rayon_id')->unsigned();
             $table->string('rombel');
             $table->string('name');
-            $table->bigInteger('nis');
+            $table->BigInteger('nis');
             $table->string('role');
             $table->string('email')->unique();
             $table->string('tahun_pelajaran');

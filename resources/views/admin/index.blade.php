@@ -45,9 +45,9 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group">
-                                <button type="button" class="btn btn-success col-12 mb--4" data-toggle="modal" data-target="#example">
-                                    Import Data
-                                </button>
+                            <button type="button" class="btn btn-success col-12 mb--4" data-toggle="modal" data-target="#example">
+                                Import Data
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -59,6 +59,7 @@
                         <form action="{{{route('input.store')}}}" method="post">
                             @csrf
                             <input type="hidden" value="{{$s->nis ?? ''}}" name="user_nis">
+                            <input type="hidden" value="{{$s->rayon_id ?? ''}}" name="rayon_id">
                             <span>Virtual Account</span>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">

@@ -41,6 +41,9 @@ class User extends Authenticatable
     public function rayon() {
         return $this->belongsTo('App\Rayon');
     }
+    public function tunggak(){
+        return $this->belongsTo('App\Tunggakan');
+    }
     public function tunggakan(){
         return $this->hasMany('App\Tunggakan');
     }

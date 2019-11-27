@@ -33,6 +33,10 @@ class HomeController extends Controller
             return view('pembimbing.index');
         } else if ($userRole == 'operator'){
             return view('operator.index');
+        } else if ($userRole == 'master'){
+            return view('master.index');
+        } else {
+            return back();
         }
     }
 }

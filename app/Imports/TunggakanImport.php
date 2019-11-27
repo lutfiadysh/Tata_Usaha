@@ -15,6 +15,7 @@ class TunggakanImport implements ToModel
     public function model(array $row)
     {
         return new Tunggakan([
+            'rayon_id' => 1,
             'user_nis' => $row[0],
             'va_jumlah' => $row[1],
             'va_bulan' => $row[2],

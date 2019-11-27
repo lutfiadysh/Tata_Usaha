@@ -130,6 +130,15 @@
                     </li>
                 @endif
 
+                {{-- sidebar master --}}
+                @if(in_array(auth()->user()->role,['master']))
+                <li class="nav-item">
+                        <a class="nav-link" href="{{ route('lihat.index') }}">
+                            <i class="ni ni-collection text-green"></i> {{ __('Lihat Data ') }}
+                        </a>
+                    </li>
+                @endif
+
                 {{-- sidebar pemimbing --}}
                 @if(in_array(auth()->user()->role,['pembimbing']))
                 <li class="nav-item">
@@ -139,8 +148,6 @@
                     </a>
                 </li>
                 @endif
-
-
             </ul>
         </div>
     </div>

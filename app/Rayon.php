@@ -18,4 +18,8 @@ class Rayon extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function tunggakan()
+    {
+        return $this->hasMany('App\Tunggakan');
+    }
 }

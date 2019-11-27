@@ -15,7 +15,8 @@ class CreateTunggakanTable extends Migration
     {
         Schema::create('tunggakan', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->BigInteger('user_nis')->unsigend();
+            $table->unsignedBigInteger('user_nis');
+            $table->unsignedBigInteger('rayon_id');
             $table->integer('va_jumlah')->nullable();
             $table->integer('va_bulan')->nullable();
             $table->integer('tunai_jumlah')->nullable();
@@ -34,6 +35,11 @@ class CreateTunggakanTable extends Migration
             $table->foreign('user_nis')
                 ->references('nis')->on('users')
                 ->onDelete('CASCADE');
+
+            $table->foreign('rayon_id')
+                ->references('id')->on('rayon')
+                ->onDelete('CASCADE');
+
             $table->timestamps();
         });
     }

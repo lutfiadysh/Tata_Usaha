@@ -50,6 +50,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 		});
 	});
 
+	Route::middleware('master')->group(function() {
+		Route::prefix('master')->group(function() {
+			Route::resource('lihat','MasterController');
+		});
+	});
+
 	Route::middleware('pembimbing')->group(function() {
 		Route::prefix('pembimbing')->group(function() {
 			Route::resource('/data','PembimbingController');
