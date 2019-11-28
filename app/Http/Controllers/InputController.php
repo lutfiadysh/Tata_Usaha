@@ -15,7 +15,9 @@ class InputController extends Controller
      */
     public function index()
     {
-        $siswa = User::where('role', 'siswa')->get();
+        $siswa = User::where('role', 'siswa')
+        ->whereYear('created_at','=' , now())
+        ->get();
         
         return view('admin.index',compact('siswa'));
 
@@ -31,6 +33,7 @@ class InputController extends Controller
     {
         Tunggakan::create([
             'user_nis' => $request->user_nis,
+            'rayon_id' => $request->rayon_id,
             'va_jumlah' => $request->va_jumlah,
             'va_bulan' => $request->va_bulan,
             'tunai_jumlah' => $request->tunai_jumlah,
@@ -81,15 +84,14 @@ class InputController extends Controller
     {
         $deleted = Tunggakan::onlyTrashed()->where('id',$id);
         $deleted->restore();
-        return redirect()->route('input.create')->withStatus(__('Data successfully Restored.'));
+        return redirect()->route('input.create',compact('s'))->withStatus(__('Data successfully Restored.'));
     }
 
     public function soft_deletes($id)
     {
-        $tunggakan = Tunggakan::findOrFail($id);
-        $tunggakan->each->delete();
-
-        return back();
+        $data = Tunggakan::where('deleted_at',null)->get();
+        $s = User::findOrFail($id);
+        $s->tunggakan->each->delete();
     }
 
     /**

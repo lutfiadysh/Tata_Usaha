@@ -34,7 +34,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 			Route::get('/input/deleted', 'InputController@create')->name('input.create');
 			Route::get('/input/{id}','InputController@show')->name('input.show');
 			Route::post('/input/store', 'InputController@store')->name('input.store');
-			Route::get('/soft_deletes/{id}', 'InputController@soft_deletes')->name('input.soft');
+			Route::get('/softdeletes/{id}', 'InputController@soft_deletes')->name('input.soft');
 			Route::get('/datakeseluruhan', 'ExcelController@data')->name('input.data');
 			Route::get('/input/{id}/restore', 'InputController@edit')->name('input.edit');
 			Route::get('/input/{id}/delete','InputController@destroy')->name('input.destroy');
@@ -52,7 +52,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 	Route::middleware('master')->group(function() {
 		Route::prefix('master')->group(function() {
-			Route::resource('lihat','MasterController');
+			Route::get('','MasterController@index')->name('lihat.index');
+			Route::get('/rincian','MasterController@create')->name('lihat.create');
 		});
 	});
 

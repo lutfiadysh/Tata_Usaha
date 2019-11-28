@@ -19,7 +19,7 @@
                     </div>
                     <div class="card-body">
                         <form action="">
-                            <div class="form-group row">
+                            <div class="form-group form-group-alternative row">
                             <input type="text" name="name" class="form-control form-control-alternative col-8" placeholder="Nama Lengkap" value="{{$s->name ?? ''}}" disabled>
                                 <button type="button" class="btn btn-primary col-4" data-toggle="modal" data-target="#exampleModal">
                                     Cari
@@ -299,7 +299,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-            <div class="modal-body">
+            <div class="modal-body table-responsive">
                 <table id="myTable" class="table table-bordered">
                     <thead>
                         <tr>

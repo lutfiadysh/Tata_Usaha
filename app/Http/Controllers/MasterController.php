@@ -16,7 +16,9 @@ class MasterController extends Controller
      */
     public function index()
     {
-        $total = Tunggakan::all()->sum("total");
+        $total = Tunggakan::whereYear('created_at','=',now())
+                ->get()
+                ->sum("total");
         $user = User::all();
 
         return view('master.lihat',compact('total','user'));
@@ -29,9 +31,9 @@ class MasterController extends Controller
      */
     public function create()
     {
-        $user = User::where('role','siswa')->get();
+        $rayon = Rayon::all();
 
-        return view('master.rincian',compact('user'));
+        return view('master.rincian',compact('rayon'));
     }
 
     /**

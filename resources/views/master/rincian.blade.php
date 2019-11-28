@@ -19,7 +19,7 @@
                         <div class="card-header boder-0 bg-gradient-green">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h3 class="mb-0 text-white float-left">Data Tunggakan keseluruhan</h3>
+                                    <h3 class="mb-0 text-white float-left">Rincian Tunggakan per-rayon</h3>
                                 </div>
                             </div>
                         </div>
@@ -29,13 +29,15 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Rayon</th>
                                     <th scope="col">Jumlah</th>
+                                    <th scope="col">action</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($user as $u)
+                                    @foreach ($rayon as $u)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$u->rayon->nama_rayon ?? ''}}</td>
-                                        <td>{{$u->tunggakan->first()->total ?? ''}}</td>
+                                        <td>{{$u->nama_rayon}}</td>
+                                        <td>Rp. {{number_format($u->tunggakan->sum("total"),2) ?? ''}}</td>
+                                        <td><a href="" class="btn btn-sm btn-primary">Lihat</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

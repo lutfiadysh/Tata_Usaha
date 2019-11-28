@@ -18,7 +18,7 @@
         <div class="row mt--2 mb-7 justify-content-center">
             <div class="col-10 ">
                 <div class="card shadow">
-                    <div class="card-header bg-gradient-success">
+                    <div class="card-header bg-gradient-green">
                         <h3 class="mb-0 text-white">Input Data User</h3>
                     </div>
                     <div class="card-body">

@@ -11,8 +11,8 @@
         </div>
         <div class=" container row mt-5 mb-7">
             <div class="col-12 ">
-                <h5 id="date_time" class="text-white mt--4"></h5>
-                    <div class="card shadow">
+                <h5 id="date_time" class="text-white mt--6"></h5>
+                    <div class="card shadow justify-content-center">
                         <div class="card-header bg-gradient-green">
                             <h3 class="mb-0 text-white">Tunggakan</h3>
                         </div>
@@ -21,21 +21,21 @@
                                 Lunas
                             </div>
                         @else
-                        <div class="card-body col-12">
+                        <div class="card-body col-12 table-responsive">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
                                         <th>virtual account</th>
-                                        <td>{{Auth::user()->tunggakan->first()->va_jumlah}}</td>
+                                        <td>Rp. {{number_format(Auth::user()->tunggakan->first()->va_jumlah,2)}}</td>
                                         <td>{{Auth::user()->tunggakan->first()->va_bulan}} bulan</td>
                                     <tr>
                                         <th>Tunai</th>
-                                        <td>{{Auth::user()->tunggakan->first()->tunai_jumlah}}</td>
+                                        <td>Rp. {{number_format(Auth::user()->tunggakan->first()->tunai_jumlah,2)}}</td>
                                         <td>{{Auth::user()->tunggakan->first()->tunai_bulan}} bulan</td>
                                     </tr>
                                     <tr>
                                         <th >DSP</th>
-                                        <td colspan="2">{{Auth::user()->tunggakan->first()->dsp}}</td>
+                                        <td colspan="2">Rp. {{number_format(Auth::user()->tunggakan->first()->dsp,2)}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="col">Sertifikat</th>
@@ -71,7 +71,7 @@
                                     </tr>
                                     <tr>
                                         <th scope="col">TOTAL</th>
-                                        <td colspan="2" class="bg-yellow text-white">{{Auth::user()->tunggakan->first()->total}}</td>
+                                        <td colspan="2" class="bg-yellow text-dark font-weight-bold text-right"> Rp. {{number_format(Auth::user()->tunggakan->first()->total,2)}}</td>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -17,7 +17,7 @@
             <div class="col-12 justify-content-center">
                     <div class="card shadow">
                         <div class="card-header bg-gradient-green">
-                            <h3 class="mb-0 text-white">Data Tunggakan</h3>
+                                <h3 class="mb-0 text-white float-left">Data Tunggakan</h3>
                         </div>
                         @if($data->isEmpty())
                             <div class="alert bg-danger justify-content-center  mt-4 mb-5 text-white">
@@ -49,20 +49,20 @@
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$u->user->name}}</td>
-                                        <td>{{$u->va_jumlah}}</td>
-                                        <td>{{$u->va_bulan}}</td>
-                                        <td>{{$u->tunai_jumlah}}</td>
-                                        <td>{{$u->tunai_bulan}}</td>
-                                        <td>{{$u->dsp}}</td>
-                                        <td>{{$u->sertifikat}}</td>
-                                        <td>{{$u->pondokan}}</td>
-                                        <td>{{$u->perpisahan}}</td>
-                                        <td>{{$u->dana_ganjil}}</td>
-                                        <td>{{$u->dana_genap}}</td>
-                                        <td>{{$u->kunjungan_industri}}</td>
-                                        <td>{{$u->bpjs}}</td>
-                                        <td>{{$u->toeic}}</td>
-                                        <td>{{$u->total}}</td>
+                                        <td>Rp. {{number_format($u->va_jumlah,2)}}</td>
+                                        <td>{{$u->va_bulan}} Bulan</td>
+                                        <td>Rp. {{number_format($u->tunai_jumlah,2)}}</td>
+                                        <td>{{$u->tunai_bulan}} Bulan</td>
+                                        <td>Rp. {{number_format($u->dsp,2)}}</td>
+                                        <td>Rp. {{number_format($u->sertifikat,2)}}</td>
+                                        <td>{Rp. {{number_format($u->pondokan,2)}}</td>
+                                        <td>Rp. {{number_format($u->perpisahan,2)}}</td>
+                                        <td>Rp. {{number_format($u->dana_ganjil,2)}}</td>
+                                        <td>Rp. {{number_format($u->dana_genap,2)}}</td>
+                                        <td>Rp. {{number_format($u->kunjungan_industri,3)}}</td>
+                                        <td>Rp. {{number_format($u->bpjs,2)}}</td>
+                                        <td>Rp. {{number_format($u->toeic,2)}}</td>
+                                        <td>Rp. {{number_format($u->total,2)}}</td>
                                         <td><a href="{{route('input.soft',$u->id)}}" class="btn btn-danger btn-sm">delete</a></td>
                                     </tr>
                                     @endforeach

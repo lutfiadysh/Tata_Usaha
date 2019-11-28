@@ -7,8 +7,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-7">
                 <div class="card bg-secondary shadow border-0">
-                    <div class="card-header bg-transparent pb-5">
-                        <div class="text-muted text-center mt-2 mb-4"><small>{{ __('Silahkan login') }}</small></div>
+                    <div class="card-header bg-gradient-teal">
+                        <div class="text-muted text-center mt-2 mb-4 "><h3 class="text-white">{{ __('Silahkan login') }}</h3></div>
                     </div>
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
@@ -49,7 +49,7 @@
                                 </label>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary my-4">{{ __('Login') }}</button>
+                                <button type="submit" class="btn text-white bg-gradient-primary my-4 col-4">{{ __('Login') }}</button>
                             </div>
                         </form>
                     </div>

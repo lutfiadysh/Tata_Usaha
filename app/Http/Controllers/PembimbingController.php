@@ -50,7 +50,9 @@ class PembimbingController extends Controller
      */
     public function show($id)
     {
-       $user = User::where([['role','siswa'],['rayon_id',$id]])->get();
+       $user = User::where([['role','siswa'],['rayon_id',$id]])
+                ->whereYear('created_at','=',now())
+                ->get();
        $users =  User::all();
 
        return view('pembimbing.data',compact('users','user'));

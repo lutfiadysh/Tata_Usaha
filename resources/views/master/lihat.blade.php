@@ -19,13 +19,13 @@
                         <div class="card-header boder-0 bg-gradient-green">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h3 class="mb-0 text-white float-left">Data Tunggakan keseluruhan</h3>
+                                    <h3 class="mb-0 text-white float-left">Data Tunggakan</h3>
                                     <a href="{{route('lihat.create')}}" class="btn btn-primary btn-sm float-right">Lihat rincian</a>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h2>Rp.{{$total}}</h2>
+                            <h2>Total : <span class="text-warning">Rp. {{number_format($total,2)}}</span></h2>
                         </div>
                     </div>
                 </div>
