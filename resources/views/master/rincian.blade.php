@@ -36,8 +36,12 @@
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$u->nama_rayon}}</td>
+                                        @if($u->tunggakan->sum("total") == 0)
+                                            <td><div class="alert bg-success text-white text-center">Lunas</div></td>
+                                        @else
                                         <td>Rp. {{number_format($u->tunggakan->sum("total"),2) ?? ''}}</td>
-                                        <td><a href="" class="btn btn-sm btn-primary">Lihat</a></td>
+                                        @endif
+                                        <td><a href="{{route('lihat.show',$u->id)}}" class="btn btn-sm btn-primary">Lihat</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

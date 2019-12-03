@@ -17,8 +17,10 @@
             <div class="col-12 justify-content-center">
                     <div class="card shadow">
                         @if($deleted->isEmpty())
-                        <div class="alert bg-warning col-11 ml-3 mt-4 mb-5 text-white">
-                            Tidak ada data
+                        <div class="row justify-content-center">
+                            <div class="alert bg-warning col-10 ml-3 mt-4 mb-4 text-white">
+                                Tidak ada data
+                            </div>
                         </div>
                         @else
                         <div class="card-header boder-0 bg-gradient-green">

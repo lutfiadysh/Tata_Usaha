@@ -24,6 +24,9 @@ class MasterController extends Controller
         return view('master.lihat',compact('total','user'));
     }
 
+    public function kembali(){
+        return view('master.index');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -55,7 +58,10 @@ class MasterController extends Controller
      */
     public function show($id)
     {
-        
+        $users = User::where('rayon_id',$id)->get();
+        $user = User::findOrFail($id);
+
+        return view('master.show',compact('user','users'));
     }
 
     /**

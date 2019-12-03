@@ -17,15 +17,19 @@
             <div class="col-12 justify-content-center">
                     <div class="card shadow">
                         <div class="card-header bg-gradient-green">
-                                <h3 class="mb-0 text-white float-left">Data Tunggakan</h3>
+                            <h3 class="mb-0 text-white float-left">Data Tunggakan</h3>
+                            <div class="col text-right" {{ isset($data) ? '' : 'disabled' }}>
+                                <a href="{{route('softdeletes.all')}}" class="btn btn-danger btn-sm" >Hapus Semua</a>
+                            </div>
                         </div>
                         @if($data->isEmpty())
-                            <div class="alert bg-danger justify-content-center  mt-4 mb-5 text-white">
+                         <div class="justify-content-center row">
+                            <div class="alert bg-danger mt-4 mb-4 text-white col-6">
                                 Tidak ada data!
                             </div>
+                        </div>
                         @else
                         <div class="card-body col-12 table-responsive">
-                            <a href="{{route('input.destroy.all')}}" class="btn btn-danger float-right mb-2" {{ isset($deleted) ? '' : 'hidden' }}>Hapus Semua</a>
                             <table id="myTable" class="table table-bordered">
                                 <thead>
                                         <th>#</th>

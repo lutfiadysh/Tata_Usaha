@@ -88,7 +88,7 @@
                     <div class="modal-body">
                         <label>Pilih file excel</label>
                         <div class="form-group">
-                            <input type="file" name="file" required class="form-control form-control-alternative">
+                            <input type="file" name="file" required class="form-control form-control-alternative" required>
                         </div>
                     </div>
                     <div class="modal-footer">

@@ -20,12 +20,12 @@
                             <div class="row align-items-center">
                                 <div class="col">
                                     <h3 class="mb-0 text-white float-left">Data Tunggakan</h3>
-                                    <a href="{{route('lihat.create')}}" class="btn btn-primary btn-sm float-right">Lihat rincian</a>
+                                    <a href="{{route('lihat.create')}}" class="btn btn-danger btn-sm float-right">Lihat rincian</a>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h2>Total : <span class="text-warning">Rp. {{number_format($total,2)}}</span></h2>
+                            <h2>Total : <span class="text-yellow">Rp. {{number_format($total,2)}}</span></h2>
                         </div>
                     </div>
                 </div>

@@ -56,7 +56,7 @@
                 <div class="modal-body">
                   <div class="form-group">
                       <label for="file">Pilih File</label>
-                      <input type="file" name="file" class="form-control form-control-alternative">
+                      <input type="file" name="file" class="form-control form-control-alternative" required>
                   </div>
                 </div>
                 <div class="modal-footer">

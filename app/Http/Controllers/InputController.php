@@ -84,14 +84,18 @@ class InputController extends Controller
     {
         $deleted = Tunggakan::onlyTrashed()->where('id',$id);
         $deleted->restore();
-        return redirect()->route('input.create',compact('s'))->withStatus(__('Data successfully Restored.'));
+        return redirect()->route('input.create',compact('deleted'))->withStatus(__('Data successfully Restored.'));
     }
 
     public function soft_deletes($id)
     {
         $data = Tunggakan::where('deleted_at',null)->get();
+        $datas = Tunggakan::where('deleted_at',null)->get();
         $s = User::findOrFail($id);
         $s->tunggakan->each->delete();
+
+        return view('admin.index',compact('data','s','datas'));
+
     }
 
     /**
@@ -110,5 +114,11 @@ class InputController extends Controller
         $data = Tunggakan::onlyTrashed()->forceDelete();
 
         return redirect()->route('input.create')->withStatus(__('Data successfully Deleted.'));
+    }
+    public function soft_deletes_all(){
+        $data = Tunggakan::all();
+        $data->each->delete();
+
+        return redirect()->route('input.data')->withStatus(__('Data successfully Deleted.'));
     }
 }

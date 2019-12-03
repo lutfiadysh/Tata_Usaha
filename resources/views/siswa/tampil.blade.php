@@ -17,9 +17,11 @@
                             <h3 class="mb-0 text-white">Tunggakan</h3>
                         </div>
                         @if(Auth::user()->tunggakan->isEmpty())
-                            <div class="alert bg-primary mt-2 mb-0 justify-content-center text-white">
-                                Lunas
+                         <div class="justify-content-center row">
+                            <div class="alert bg-success mt-4 col-6 mb-4 text-white">
+                                <h3 class="mb-0 text-white">Lunas</h3>
                             </div>
+                         </div>
                         @else
                         <div class="card-body col-12 table-responsive">
                             <table class="table table-bordered">
