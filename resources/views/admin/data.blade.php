@@ -18,19 +18,15 @@
                     <div class="card shadow">
                         <div class="card-header bg-gradient-green">
                             <h3 class="mb-0 text-white float-left">Data Tunggakan</h3>
-                            <div class="col text-right" {{ isset($data) ? '' : 'disabled' }}>
-                                <a href="{{route('softdeletes.all')}}" class="btn btn-danger btn-sm" >Hapus Semua</a>
+                            <div class="col text-right">
+                                <a href="{{route('input.rincian')}}" class="btn btn-warning btn-sm" >Lihat  Rincian</a>
                             </div>
                         </div>
-                        @if($data->isEmpty())
-                         <div class="justify-content-center row">
-                            <div class="alert bg-danger mt-4 mb-4 text-white col-6">
-                                Tidak ada data!
-                            </div>
-                        </div>
-                        @else
                         <div class="card-body col-12 table-responsive">
-                            <table id="myTable" class="table table-bordered">
+                            <div class="card-body">
+                                <h2>Total : <span class="text-yellow">Rp. {{number_format($total,2)}}</span></h2>
+                            </div>
+                            {{-- <table id="myTable" class="table table-bordered">
                                 <thead>
                                         <th>#</th>
                                         <th>Nama</th>
@@ -71,8 +67,7 @@
                                     </tr>
                                     @endforeach
                                 </tbody>
-                            </table>
-                            @endif
+                            </table> --}}
                         </div>
                     </div>
             </div>

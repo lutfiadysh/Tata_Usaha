@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Tunggakan;
+use App\Rayon;
 
 class InputController extends Controller
 {
@@ -90,12 +91,30 @@ class InputController extends Controller
     public function soft_deletes($id)
     {
         $data = Tunggakan::where('deleted_at',null)->get();
-        $datas = Tunggakan::where('deleted_at',null)->get();
         $s = User::findOrFail($id);
         $s->tunggakan->each->delete();
 
-        return view('admin.index',compact('data','s','datas'));
+        return view('admin.index',compact('data','s'));
+    }
 
+    public function rincian()
+    {
+        $rayon = Rayon::all();
+
+        return view('admin.rincian',compact('rayon'));
+    }
+
+    public function lihat($id)
+    {
+        $users = User::where('rayon_id',$id)->get();
+        $user = User::findOrFail($id);
+
+        return view('admin.lihat',compact('user','users'));
+    }
+
+    public function back()
+    {
+        return redirect()->route('input.rincian');
     }
 
     /**

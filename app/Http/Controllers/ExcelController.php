@@ -20,9 +20,11 @@ class ExcelController extends Controller
 
 	public function data()
     {
-        $data = Tunggakan::where('deleted_at',null)->get();
+        $total = Tunggakan::whereYear('created_at' ,'=' , now())
+                ->get()
+                ->sum("total");
 
-        return view('admin.data',compact('data'));
+        return view('admin.data',compact('total'));
     }
 
 	public function tunggakan_import(){

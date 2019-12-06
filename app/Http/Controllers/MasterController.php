@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Rayon;
 use App\Tunggakan;
+use Carbon\Carbon;
 
 class MasterController extends Controller
 {
@@ -16,7 +17,10 @@ class MasterController extends Controller
      */
     public function index()
     {
-        $total = Tunggakan::whereYear('created_at','=',now())
+        $start = Carbon::parse('2019-12-03')->format('Y-m');
+        $end = Carbon::parse('2020-07-12')->format('Y-m');
+
+        $total = Tunggakan::whereYear('created_at' ,'=' , now())
                 ->get()
                 ->sum("total");
         $user = User::all();

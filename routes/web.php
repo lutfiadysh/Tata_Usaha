@@ -35,12 +35,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 			Route::get('/input/{id}','InputController@show')->name('input.show');
 			Route::post('/input/store', 'InputController@store')->name('input.store');
 			Route::get('/soft/{id}', 'InputController@soft_deletes')->name('input.soft');
+			Route::get('/rincian','InputController@rincian')->name('input.rincian');
 			Route::get('/datakeseluruhan', 'ExcelController@data')->name('input.data');
 			Route::get('/input/{id}/restore', 'InputController@edit')->name('input.edit');
 			Route::get('/input/{id}/delete','InputController@destroy')->name('input.destroy');
 			Route::get('/delete/all', 'InputController@destroy_all')->name('input.destroy.all');
+			Route::get('/{id}','InputController@lihat')->name('input.lihat');
 			Route::post('/tunggakan/import', 'ExcelController@tunggakan_import')->name('import.tunggakan');
 			Route::get('/softdeletes/all','InputController@soft_deletes_all')->name('softdeletes.all');
+			Route::get('/','InputController@back')->name('back');
 		});
 	});
 

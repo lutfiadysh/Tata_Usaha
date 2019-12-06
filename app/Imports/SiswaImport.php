@@ -16,8 +16,8 @@ class SiswaImport implements ToModel
     {
         if($row[3] == "Sukasari 2"){
             $row[3] = 1;
-        }else if ($row[3] == "Sukasari 1"){
-            $row[3] = 2;
+        }else if ($row[3] == "Ciawi 1"){
+            $row[3] = 3;
         }
         return new User([
             'name' => $row[1],

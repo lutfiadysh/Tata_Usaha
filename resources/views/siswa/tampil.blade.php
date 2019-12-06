@@ -24,7 +24,9 @@
                          </div>
                         @else
                         <div class="card-body col-12 table-responsive">
-                            <table class="table table-bordered">
+                            <h3 class="mb-4">Total : <span class="text-warning">Rp. {{number_format(Auth::user()->tunggakan->first()->total,2)}}</span></h3>
+                            <p class="mb-0">Rincian :</p>
+                            <table class="table table-bordered mb-4">
                                 <thead>
                                     <tr>
                                         <th>virtual account</th>
@@ -71,10 +73,10 @@
                                         <th scope="col">TOEIC</th>
                                         <td colspan="2">{{Auth::user()->tunggakan->first()->toeic}}</td>
                                     </tr>
-                                    <tr>
+                                    {{-- <tr>
                                         <th scope="col">TOTAL</th>
                                         <td colspan="2" class="bg-yellow text-dark font-weight-bold text-right"> Rp. {{number_format(Auth::user()->tunggakan->first()->total,2)}}</td>
-                                    </tr>
+                                    </tr> --}}
                                 </thead>
                                 <tbody>
                                     <tr>
